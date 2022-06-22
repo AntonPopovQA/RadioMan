@@ -9,11 +9,11 @@ public class RadioTest {
     public void shouldIncreaseRadioStation() { // Переключение на следующую радиостанцию
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 5;
+        radio.setCurrentRadioStation(5);
 
         radio.increaseRadioStation();
         int expected = 6;
-        int actual = radio.currentRadioStation;
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -22,11 +22,11 @@ public class RadioTest {
     public void shouldIncreaseRadiostationNextAfter9() { // Переключение на следующую радиостанцию после 9-ой
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 9;
+        radio.setCurrentRadioStation(9);
 
         radio.increaseRadioStation();
         int expected = 0;
-        int actual = radio.currentRadioStation;
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -35,11 +35,11 @@ public class RadioTest {
     public void shouldReduceLastRadiostation() { // Переключение на предыдущую радиостанцию c последней
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 9;
+        radio.setCurrentRadioStation(9);
 
         radio.reduceRadiostation();
         int expected = 8;
-        int actual = radio.currentRadioStation;
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -47,11 +47,11 @@ public class RadioTest {
     public void shouldReduceLastOtherRadiostation() { // Переключение на предыдущую радиостанцию (введение иных данных)
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 10;
+        radio.setCurrentRadioStation(10);
 
         radio.reduceRadiostation();
         int expected = 10;
-        int actual = radio.currentRadioStation;
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -59,11 +59,11 @@ public class RadioTest {
     public void shouldReduceRadiostation() { // Переключение на предыдущую радиостанцию
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 6;
+        radio.setCurrentRadioStation(6);
 
         radio.reduceRadiostation();
         int expected = 5;
-        int actual = radio.currentRadioStation;
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -72,11 +72,11 @@ public class RadioTest {
     public void shouldReduceRadiostationPrevioslyBefore0() { // Переключение на предыдущую радиостанцию перед 0-й
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 0;
+        radio.setCurrentRadioStation(0);
 
         radio.reduceRadiostationPreviosly();
         int expected = 9;
-        int actual = radio.currentRadioStation;
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -84,11 +84,11 @@ public class RadioTest {
     public void shouldReduceRadiostationPrevioslyOtherBefore0() { // Переключение на предыдущую радиостанцию перед 0-й (введение иных данных)
         Radio radio = new Radio();
 
-        radio.currentRadioStation = 10;
+        radio.setCurrentRadioStation(10);
 
         radio.reduceRadiostationPreviosly();
         int expected = 10;
-        int actual = radio.currentRadioStation;
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -98,7 +98,7 @@ public class RadioTest {
 
         radio.setCurrentRadioStation(6);
         int expected = 6;
-        int actual = radio.currentRadioStation;
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected,actual);
     }

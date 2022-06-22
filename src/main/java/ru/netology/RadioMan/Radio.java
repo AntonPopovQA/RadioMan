@@ -1,6 +1,6 @@
 package ru.netology.RadioMan;
 public class Radio {
-    public int currentRadioStation;
+    private int currentRadioStation;
     public int currentVolume;
 
     public void increaseRadioStation() {
@@ -22,7 +22,9 @@ public class Radio {
             currentRadioStation = 9;
         }
     }
-
+    public int getCurrentRadioStation() {
+        return currentRadioStation;
+    }
     public void setCurrentRadioStation(int radiostation) {
         currentRadioStation = radiostation;
     }
