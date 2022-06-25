@@ -8,6 +8,8 @@ public class Radio {
         if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
         }
+    }
+    public void increaseMaxRadioStation() {
         if (currentRadioStation >= 9) {
             currentRadioStation = 0;
         }
