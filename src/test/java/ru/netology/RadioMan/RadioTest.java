@@ -81,7 +81,7 @@ public class RadioTest {
     @Test
     public void shouldIncreaseRadioStationNext() { // Переключение на следующую радиостанцию после последней (11)
         Radio radio = new Radio(12);
-        radio.setCurrentRadioStation(12);
+        radio.setCurrentRadioStation(11);
         radio.increaseRadioStation();
         int expected = 0;
         int actual = radio.getCurrentRadioStation();
@@ -105,7 +105,7 @@ public class RadioTest {
         Radio radio = new Radio(12);
         radio.setCurrentRadioStation(0);
         radio.reduceRadioStationPrev();
-        int expected = 12;
+        int expected = 11;
         int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);

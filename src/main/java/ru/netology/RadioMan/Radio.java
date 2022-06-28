@@ -9,7 +9,7 @@ public class Radio {
     private int minVolume = 0;
 
     public Radio(int amountRadio) {
-        this.maxRadioStation = amountRadio;
+        this.maxRadioStation = amountRadio - 1;
     }
 
     public Radio() {
