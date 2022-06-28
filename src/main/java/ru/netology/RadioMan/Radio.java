@@ -7,22 +7,15 @@ public class Radio {
     public void increaseRadioStation() {
         if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
-        }
-    }
-    public void increaseMaxRadioStation() {
-        if (currentRadioStation >= 9) {
+        } else {
             currentRadioStation = 0;
         }
     }
 
     public void reduceRadioStation() {
-        if (currentRadioStation <= 9) {
+        if (currentRadioStation > 0) {
             currentRadioStation = currentRadioStation - 1;
-        }
-    }
-
-    public void reduceRadioStationPrev() {
-        if (currentRadioStation == 0) {
+        } else {
             currentRadioStation = 9;
         }
     }
@@ -32,10 +25,10 @@ public class Radio {
     }
 
     public void setCurrentRadioStation(int radioStation) {
-        if (radioStation <= 0) {
+        if (radioStation < 0) {
             return;
         }
-        if (radioStation > 10) {
+        if (radioStation > 9) {
             return;
         }
         this.currentRadioStation = radioStation;
